@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sammy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <h1><br><br>Happy Birthday<br> Sammy !</h1>
+        
+        <div class="friend-gallery">
+            <div class="image-gallery">
+                <img src="friend1.jpg" alt="Friend's Image 1" onclick="openImageModal(this)">
+                <img src="friend2.jpg" alt="Friend's Image 2" onclick="openImageModal(this)">
+                <img src="friend3.jpg" alt="Friend's Image 3" onclick="openImageModal(this)">
+            </div>
+        </div>
+
+        <div class="birthday-message">
+            <p>Dear Bon,</p>
+            <p>Happy Birthday! 🎉 I hope this day brings you as much happiness as BTS brings to ARMY. Stay amazing, and always keep shining like the stars you are! 💜</p>
+            <p>- From Rupam</p>
+        </div>
+
+        <button class="play-music" onclick="toggleMusic()">Play BTS Song</button>
+
+        <div class="footer">
+            <p>“I Purple You” 💜 - BTS</p>
+        </div>
+    </div>
+
+    <!-- Modal Pop-up for Video -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <iframe id="btsVideo" width="580" height="315" 
+                    src="https://www.youtube.com/embed/82F3IMlv-yQ?si=m9XaqblKzwZhnFr2" 
+                    
+                    title="BTS Birthday Song Video" 
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Pop-up for Image -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="" alt="Popup Image" class="popup-image">
+        </div>
+    </div>
+
+    <audio id="btsSong" loop>
+        <source src="bts_song.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
